@@ -1,6 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
 const fs = require('fs')
+const generateMarkdown = require("./utils/generateMarkdown")
+const renderLicenseBadge = require("./utils/generateMarkdown")
+const badges = require("./utils/")
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -9,9 +12,9 @@ const questions = [
         name: 'title',
       },
       {
-            type: 'input',
-            message: 'What is a description of the app?',
-            name: 'description',
+        type: 'input',
+        message: 'What is a brief description of the app?',
+        name: 'description',
       },
       {
         type: 'input',
@@ -20,8 +23,13 @@ const questions = [
       },
       {
         type: 'input',
+        message: 'how do you use the app?',
+        name: 'usage',
+      },
+      {
+        type: 'input',
         message: 'who contributed to the project?',
-        name: 'contribute',
+        name: 'credit',
       },
       {
         type: 'input',
@@ -31,7 +39,7 @@ const questions = [
       {
         type: 'list',
         message: 'which liscence will you use?',
-        choices: [""],
+        choices: ["MIT","GNU","Apache","GPL","none"],
         name: 'license',
       },
 
@@ -41,7 +49,12 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+async function init() {
+  const response = await inquirer.prompt(questions)
+ console.log(response)
+  response.license =renderLicenseBadge(response.license)
+  let readMeData = generateMarkdown(response);
+}
 
 // Function call to initialize app
 init();
