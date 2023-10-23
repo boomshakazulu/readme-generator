@@ -18,13 +18,13 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if(license==="MIT"){
-    return"(https://choosealicense.com/licenses/mit/)"
+    return"https://choosealicense.com/licenses/mit/"
   }else if(license==="GNU GPLv3"){
-    return"(https://choosealicense.com/licenses/gpl-3.0/)"
+    return"https://choosealicense.com/licenses/gpl-3.0/"
   }else if(license==="Apache"){
-    return"(https://choosealicense.com/licenses/apache-2.0/)"
+    return"https://choosealicense.com/licenses/apache-2.0/"
   }else if(license==="GNU AGPLv3"){
-    return"(https://choosealicense.com/licenses/agpl-3.0/)"
+    return"https://choosealicense.com/licenses/agpl-3.0/"
   }else{
     return ""
   }
@@ -39,7 +39,7 @@ function renderLicenseSection(license) {
 
   ## License
   License used for this project - ${license.license}.
-  ${license.license} information [${license.licenseURL}]${license.licenseURL}
+  ${license.license} information [${license.licenseURL}](${license.licenseURL})
   * For more information on license types, please reference this website
   for additional licensing information - [https: //choosealicense.com/](https://choosealicense.com/).
 
