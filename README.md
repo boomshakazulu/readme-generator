@@ -22,10 +22,16 @@
 
 ## Usage
 
-  To use the app run index.js in a terminal window with node.js installed, answer the questions provided and a README.md file will be generated for you in the same folder.
+  To use the app run index.js in a terminal window with node.js installed, answer the questions provided and a README.md file will be generated for you in the same folder. [Click here for a short tutorial video](https://github.com/boomshakazulu/readme-generator/assets/120769113/cd19c580-7073-42f4-9081-10004d2d66c8)
+
 
 ---
 
+## Credits
+
+  N/A
+
+---
 
 ## Contributing:
   
